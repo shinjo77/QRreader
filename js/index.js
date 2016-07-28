@@ -49,26 +49,26 @@ var app = {
         console.log('Received Event: ' + id);
     },
     scan: function() {
-        console.log('scanning');
         
         cordova.plugins.barcodeScanner.scan(
           function (result) {
-              alert("We got a barcode\n" +
-                    "Result: " + result.text + "\n" +
-                    "Format: " + result.format + "\n" +
-                    "Cancelled: " + result.cancelled);
+              setTimeout(function() {
+                    alert("We got a barcode\n" +
+                          "Result: " + result.text + "\n" +
+                          "Format: " + result.format + "\n" +
+                          "Cancelled: " + result.cancelled);                            
+                }, 0);
           }, 
           function (error) {
               alert("Scanning failed: " + error);
           },
           {
-              "preferFrontCamera" : true, // iOS and Android
-              "showFlipCameraButton" : true, // iOS and Android
-              "prompt" : "Place a barcode inside the scan area", // supported on Android only
-              "formats" : "QR_CODE,PDF_417", // default: all but PDF_417 and RSS_EXPANDED
-              "orientation" : "portrait" // Android only (portrait|landscape), default unset so it rotates with the device
+            "preferFrontCamera" : false,
+            "showFlipCameraButton" : true,
+            "orientation" : "landscape""orientation" : "portrait" // Android only (portrait|landscape), default unset so it rotates with the device        
           }
        );
+        alert('done')
     },
 
     encode: function() {
