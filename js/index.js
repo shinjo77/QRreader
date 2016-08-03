@@ -49,11 +49,10 @@ var app = {
         console.log('Received Event: ' + id);
     },
      scan: function() {
-        alert('scanning');
         
         cordova.plugins.barcodeScanner.scan(
               function (result) {
-                  alert("We got a barcode not \n" +
+                  alert("We got a barcode \n" +
                         "Result: " + result.text + "\n" +
                         "Format: " + result.format + "\n" +
                         "Cancelled: " + result.cancelled);
@@ -69,7 +68,6 @@ var app = {
                   "orientation" : "portrait" // Android only (portrait|landscape), default unset so it rotates with the device
               }
            );
-        alert('scanning end');
     }
 };
 
