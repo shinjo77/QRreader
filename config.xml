@@ -3,6 +3,7 @@
   <description>Bar code scanner tester.</description>
   <author href="http://phonegap.com" email="andrewjun@uber.biz">Andrew Jun</author>
   <content src="index.html"/>
+   <preference name="phonegap-version" value="cli-6.3.0" />
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="portrait"/>
   <preference name="target-device" value="universal"/>
@@ -18,6 +19,8 @@
   <preference name="disable-cursor" value="false"/>
   <preference name="android-minSdkVersion" value="14"/>
   <preference name="android-installLocation" value="auto"/>
+   <preference name="android-build-tool" value="gradle" />
+
   <gap:plugin name="org.apache.cordova.battery-status"/>
   <gap:plugin name="org.apache.cordova.camera"/>
   <gap:plugin name="org.apache.cordova.media-capture"/>
@@ -37,7 +40,6 @@
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <gap:plugin name="org.apache.cordova.vibration"/>
    <gap:plugin name="com.phonegap.plugins.barcodescanner" />
-   <preference name="android-build-tool" value="gradle" />.
   <icon src="icon.png"/>
   <icon src="www/res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="www/res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
