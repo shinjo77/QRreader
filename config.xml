@@ -77,6 +77,6 @@
   <plugin spec="https://github.com/phonegap/phonegap-plugin-barcodescanner#6.0.1" />
   </platform>
 <platform name="winphone">
-  <gap:plugin name="phonegap.plugin.barcodescanner"/>
+  <gap:plugin name="com.phonegap.plugins.barcodescanner" />
   </platform>
-</widget>
+</widget>   
