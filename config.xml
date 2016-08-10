@@ -39,7 +39,6 @@
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <gap:plugin name="org.apache.cordova.vibration"/>
-  <plugin spec="https://github.com/phonegap/phonegap-plugin-barcodescanner#6.0.1" />
   <icon src="icon.png"/>
   <icon src="www/res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="www/res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
@@ -75,6 +74,9 @@
   <allow-intent href="geo:*"/>
   <platform name="android">
     <allow-intent href="market:*"/>
+  <plugin spec="https://github.com/phonegap/phonegap-plugin-barcodescanner#6.0.1" />
   </platform>
-<platform name="winphone" />
+<platform name="winphone">
+  <gap:plugin name="phonegap.plugin.barcodescanner"/>
+  </platform>
 </widget>
